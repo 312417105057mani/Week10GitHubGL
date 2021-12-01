@@ -1,0 +1,570 @@
+Microsoft Windows [Version 10.0.19042.1387]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\>mkdir gitws
+
+F:\>cd gitws
+
+F:\gitws>mkdir demoapp
+
+F:\gitws>cd demoapp
+
+F:\gitws\demoapp>git. init
+'git.' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>git --version
+git version 2.34.0.windows.1
+
+F:\gitws\demoapp>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+F:\gitws\demoapp>git init
+Initialized empty Git repository in F:/gitws/demoapp/.git/
+
+F:\gitws\demoapp>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+F:\gitws\demoapp>git log
+fatal: your current branch 'master' does not have any commits yet
+
+F:\gitws\demoapp>vi master1.txt
+'vi' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>viw master1.txt
+'viw' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>vim master1.txt
+'vim' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>master1.txt
+
+F:\gitws\demoapp>cat master1.txt
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\gitws\demoapp>f1.txt
+'f1.txt' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>git log
+fatal: your current branch 'master' does not have any commits yet
+
+F:\gitws\demoapp>git branch
+
+F:\gitws\demoapp>git add master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   master1.txt
+
+
+F:\gitws\demoapp>git commit "First commit to master1.txt"
+error: pathspec 'First commit to master1.txt' did not match any file(s) known to git
+
+F:\gitws\demoapp>git commit -m "first commit to master1.txt"
+[master (root-commit) 9407f4c] first commit to master1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\gitws\demoapp>git log
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git log 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git log --oneline
+9407f4c (HEAD -> master) first commit to master1.txt
+
+F:\gitws\demoapp>
+Microsoft Windows [Version 10.0.19042.1387]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\>cd gitws
+
+F:\gitws>cd demoapp
+
+F:\gitws\demoapp>master1.txt
+
+F:\gitws\demoapp>git log
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   master1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git practice model.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+F:\gitws\demoapp>git add master1.txt
+
+F:\gitws\demoapp>git commit -m "second master1 change added"
+[master b678b94] second master1 change added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+F:\gitws\demoapp>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git practice model.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\gitws\demoapp>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\gitws\demoapp>git log
+commit b678b94babf85d5e55937897272664285694904f (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:43:30 2021 +0530
+
+    second master1 change added
+
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\gitws\demoapp>git log --oneline
+b678b94 (HEAD -> master) second master1 change added
+9407f4c first commit to master1.txt
+
+F:\gitws\demoapp>Microsoft Windows [Version 10.0.19042.1387]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\>cd gitws
+
+F:\gitws>cd demoapp
+
+F:\gitws\demoapp>master1.txt
+
+F:\gitws\demoapp>git log
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   master1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git practice model.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+F:\gitws\demoapp>git add master1.txt
+
+F:\gitws\demoapp>git commit -m "second master1 change added"
+[master b678b94] second master1 change added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+F:\gitws\demoapp>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git practice model.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\gitws\demoapp>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\gitws\demoapp>git log
+commit b678b94babf85d5e55937897272664285694904f (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:43:30 2021 +0530
+
+    second master1 change added
+
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\gitws\demoapp>git log --oneline
+b678b94 (HEAD -> master) second master1 change added
+9407f4c first commit to master1.txt
+
+F:\gitws\demoapp>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\gitws\demoapp>git add master2.txt
+
+F:\gitws\demoapp>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   master2.txt
+
+
+F:\gitws\demoapp>git log
+commit b678b94babf85d5e55937897272664285694904f (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:43:30 2021 +0530
+
+    second master1 change added
+
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git commit -m "Master2 is commited"
+[master 92ada83] Master2 is commited
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master2.txt
+
+F:\gitws\demoapp>git log
+commit 92ada8351b43517848f8b2a18878e6fa5c7e6e64 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 12:31:43 2021 +0530
+
+    Master2 is commited
+
+commit b678b94babf85d5e55937897272664285694904f
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:43:30 2021 +0530
+
+    second master1 change added
+
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>dir
+ Volume in drive F has no label.
+ Volume Serial Number is 963F-3432
+
+ Directory of F:\gitws\demoapp
+
+12/01/2021  12:30 PM    <DIR>          .
+12/01/2021  12:30 PM    <DIR>          ..
+12/01/2021  10:39 AM                51 master1.txt
+12/01/2021  12:30 PM                14 master2.txt
+               2 File(s)             65 bytes
+               2 Dir(s)  109,659,123,712 bytes free
+
+F:\gitws\demoapp>.gitignore
+'.gitignore' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\gitws\demoapp>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitignore.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\gitws\demoapp>git add gitignore
+fatal: pathspec 'gitignore' did not match any files
+
+F:\gitws\demoapp>git add gitignore.txt
+
+F:\gitws\demoapp>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   gitignore.txt
+
+
+F:\gitws\demoapp>git commit -m "ignore file added success"
+[master ee588c5] ignore file added success
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gitignore.txt
+
+F:\gitws\demoapp>git log
+commit ee588c54db4c61259370870f40771b8b5ca87230 (HEAD -> master)
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 12:38:12 2021 +0530
+
+    ignore file added success
+
+commit 92ada8351b43517848f8b2a18878e6fa5c7e6e64
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 12:31:43 2021 +0530
+
+    Master2 is commited
+
+commit b678b94babf85d5e55937897272664285694904f
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:43:30 2021 +0530
+
+    second master1 change added
+
+commit 9407f4cc5288bb23d20a417c737f5a2a2524a3e2
+Author: Manikandan C <cmanikandan@hcl.com>
+Date:   Wed Dec 1 10:05:09 2021 +0530
+
+    first commit to master1.txt
+
+F:\gitws\demoapp>git remote
+
+F:\gitws\demoapp>git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+F:\gitws\demoapp>git lfs
+git-lfs/3.0.2 (GitHub; windows amd64; go 1.17.2)
+git lfs <command> [<args>]
+
+Git LFS is a system for managing and versioning large files in
+association with a Git repository.  Instead of storing the large files
+within the Git repository as blobs, Git LFS stores special "pointer
+files" in the repository, while storing the actual file contents on a
+Git LFS server.  The contents of the large file are downloaded
+automatically when needed, for example when a Git branch containing
+the large file is checked out.
+
+Git LFS works by using a "smudge" filter to look up the large file
+contents based on the pointer file, and a "clean" filter to create a
+new version of the pointer file when the large file's contents change.
+It also uses a pre-push hook to upload the large file contents to
+the Git LFS server whenever a commit containing a new large file
+version is about to be pushed to the corresponding Git server.
+
+Commands
+--------
+
+Like Git, Git LFS commands are separated into high level ("porcelain")
+commands and low level ("plumbing") commands.
+
+High level commands (porcelain)
+-------------------------------
+
+* git lfs env:
+    Display the Git LFS environment.
+* git lfs checkout:
+    Populate working copy with real content from Git LFS files.
+* git lfs dedup:
+    De-duplicate Git LFS files.
+* git lfs ext:
+    Display Git LFS extension details.
+* git lfs fetch:
+    Download Git LFS files from a remote.
+* git lfs fsck:
+    Check Git LFS files for consistency.
+* git lfs install:
+    Install Git LFS configuration.
+* git lfs lock:
+    Set a file as "locked" on the Git LFS server.
+* git lfs locks:
+    List currently "locked" files from the Git LFS server.
+* git lfs logs:
+    Show errors from the Git LFS command.
+* git lfs ls-files:
+    Show information about Git LFS files in the index and working tree.
+* git lfs migrate:
+    Migrate history to or from Git LFS
+* git lfs prune:
+    Delete old Git LFS files from local storage
+* git lfs pull:
+    Fetch Git LFS changes from the remote & checkout any required working tree
+    files.
+* git lfs push:
+    Push queued large files to the Git LFS endpoint.
+* git lfs status:
+    Show the status of Git LFS files in the working tree.
+* git lfs track:
+    View or add Git LFS paths to Git attributes.
+* git lfs uninstall:
+    Uninstall Git LFS by removing hooks and smudge/clean filter configuration.
+* git lfs unlock:
+    Remove "locked" setting for a file on the Git LFS server.
+* git lfs untrack:
+    Remove Git LFS paths from Git Attributes.
+* git lfs update:
+    Update Git hooks for the current Git repository.
+* git lfs version:
+    Report the version number.
+
+Low level commands (plumbing)
+-----------------------------
+
+* git lfs clean:
+    Git clean filter that converts large files to pointers.
+* git lfs filter-process:
+    Git process filter that converts between large files and pointers.
+* git lfs pointer:
+    Build and compare pointers.
+* git lfs post-checkout:
+    Git post-checkout hook implementation.
+* git lfs post-commit:
+    Git post-commit hook implementation.
+* git lfs post-merge:
+    Git post-merge hook implementation.
+* git lfs pre-push:
+    Git pre-push hook implementation.
+* git lfs smudge:
+    Git smudge filter that converts pointer in blobs to the actual content.
+* git lfs standalone-file:
+    Git LFS standalone transfer adapter for file URLs (local paths).
+
+Examples
+--------
+
+To get started with Git LFS, the following commands can be used.
+
+ 1. Setup Git LFS on your system. You only have to do this once per
+    repository per machine:
+
+        git lfs install
+
+ 2. Choose the type of files you want to track, for examples all ISO
+    images, with git lfs track:
+
+        git lfs track "*.iso"
+
+ 3. The above stores this information in gitattributes(5) files, so
+    that file need to be added to the repository:
+
+        git add .gitattributes
+
+ 4. Commit, push and work with the files normally:
+
+        git add file.iso
+        git commit -m "Add disk image"
+        git push
+
+F:\gitws\demoapp>
+F:\gitws\demoapp>git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+F:\gitws\demoapp>git branch
+* master
+
+F:\gitws\demoapp>git branch<branch1>
+The syntax of the command is incorrect.
+
+F:\gitws\demoapp>git branch <branch1>
+The syntax of the command is incorrect.
+
+F:\gitws\demoapp>git branch branch1
+
+F:\gitws\demoapp> git remote
+
+F:\gitws\demoapp> git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+F:\gitws\demoapp> git remote add origin https://github.com/312417105057mani/Week10GitHubGL.git
+
+F:\gitws\demoapp>git remote
+origin
+
+F:\gitws\demoapp> git remote -v
+origin  https://github.com/312417105057mani/Week10GitHubGL.git (fetch)
+origin  https://github.com/312417105057mani/Week10GitHubGL.git (push)
+
+F:\gitws\demoapp>git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 1.07 KiB | 218.00 KiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/312417105057mani/Week10GitHubGL.git
+ * [new branch]      master -> master
+
+F:\gitws\demoapp>git remote
+origin
+
+F:\gitws\demoapp>git pull origin master
+From https://github.com/312417105057mani/Week10GitHubGL
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+F:\gitws\demoapp>
